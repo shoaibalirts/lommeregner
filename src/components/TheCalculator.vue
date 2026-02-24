@@ -10,9 +10,7 @@
           height="100"
           class="d-flex align-end justify-end pa-4 mb-4 rounded-lg bg-black"
         >
-          <div
-            class="text-h3 font-weight-light text-green-accent-3 overflow-hidden"
-          >
+          <div class="text-h3 font-weight-light white overflow-hidden">
             {{ current || "0" }}
           </div>
         </v-sheet>
@@ -138,11 +136,39 @@ export default {
       operatorClicked: false,
     };
   },
+  mounted() {
+    window.addEventListener("keydown", this.handleKeyboard);
+  },
+  // This cleans up if the component is destroyed (Good Software Quality!)
+  beforeUnmount() {
+    window.removeEventListener("keydown", this.handleKeyboard);
+  },
   methods: {
     isOperator(val) {
       return ["+", "-", "*", "/"].includes(val);
     },
+    handleKeyboard(e) {
+      // Numbers 0-9
+      if (e.key >= "0" && e.key <= "9") this.append(e.key);
 
+      // Operators
+      if (e.key === "+") this.setOperator("+");
+      if (e.key === "-") this.setOperator("-");
+      if (e.key === "*") this.setOperator("*");
+      if (e.key === "/") this.setOperator("/");
+
+      // Special Keys
+      if (e.key === "Enter" || e.key === "=") {
+        e.preventDefault(); // Stop page from scrolling/refreshing
+        this.calculate();
+      }
+      if (e.key === "Escape" || e.key === "c" || e.key === "C") {
+        this.clear();
+      }
+      if (e.key === "Backspace") {
+        this.current = this.current.slice(0, -1);
+      }
+    },
     append(num) {
       if (this.operatorClicked) {
         this.current = "";
