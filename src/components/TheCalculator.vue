@@ -19,29 +19,17 @@
 
         <v-row no-gutters>
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('7')"
+            ><v-btn block size="x-large" color="white" @click="append('7')"
               >7</v-btn
             ></v-col
           >
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('8')"
+            ><v-btn block size="x-large" color="white" @click="append('8')"
               >8</v-btn
             ></v-col
           >
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('9')"
+            ><v-btn block size="x-large" color="white" @click="append('9')"
               >9</v-btn
             ></v-col
           >
@@ -57,29 +45,17 @@
           </v-col>
 
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('4')"
+            ><v-btn block size="x-large" color="white" @click="append('4')"
               >4</v-btn
             ></v-col
           >
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('5')"
+            ><v-btn block size="x-large" color="white" @click="append('5')"
               >5</v-btn
             ></v-col
           >
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('6')"
+            ><v-btn block size="x-large" color="white" @click="append('6')"
               >6</v-btn
             ></v-col
           >
@@ -94,29 +70,17 @@
           </v-col>
 
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('1')"
+            ><v-btn block size="x-large" color="white" @click="append('1')"
               >1</v-btn
             ></v-col
           >
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('2')"
+            ><v-btn block size="x-large" color="white" @click="append('2')"
               >2</v-btn
             ></v-col
           >
           <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('3')"
+            ><v-btn block size="x-large" color="white" @click="append('3')"
               >3</v-btn
             ></v-col
           >
@@ -131,11 +95,7 @@
           </v-col>
 
           <v-col cols="9" class="pa-1">
-            <v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('0')"
+            <v-btn block size="x-large" color="white" @click="append('0')"
               >0</v-btn
             >
           </v-col>
