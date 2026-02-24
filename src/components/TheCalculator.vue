@@ -52,7 +52,7 @@
               color="orange-darken-2"
               @click="setOperator('/')"
             >
-              <v-icon>mdi-divide</v-icon>
+              ÷
             </v-btn>
           </v-col>
 
@@ -130,27 +130,13 @@
             >
           </v-col>
 
-          <v-col cols="3" class="pa-1"
-            ><v-btn
+          <v-col cols="9" class="pa-1">
+            <v-btn
               block
               size="x-large"
               color="grey-darken-2"
               @click="append('0')"
               >0</v-btn
-            ></v-col
-          >
-          <v-col cols="3" class="pa-1"
-            ><v-btn
-              block
-              size="x-large"
-              color="grey-darken-2"
-              @click="append('.')"
-              >.</v-btn
-            ></v-col
-          >
-          <v-col cols="3" class="pa-1">
-            <v-btn block size="x-large" color="success" @click="calculate"
-              >=</v-btn
             >
           </v-col>
           <v-col cols="3" class="pa-1">
@@ -163,9 +149,18 @@
             >
           </v-col>
 
-          <v-col cols="12" class="pa-1">
-            <v-btn block size="x-large" color="red-darken-3" @click="clear"
+          <v-col cols="3" class="pa-1">
+            <v-btn block size="x-large" color="grey-darken-2" @click="clear"
               >C</v-btn
+            >
+          </v-col>
+          <v-col cols="9" class="pa-1">
+            <v-btn
+              block
+              size="x-large"
+              color="orange-darken-2"
+              @click="calculate"
+              >=</v-btn
             >
           </v-col>
         </v-row>
