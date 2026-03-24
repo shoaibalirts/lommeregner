@@ -16,6 +16,39 @@
         </v-sheet>
 
         <v-row no-gutters>
+          <v-col cols="3" class="pa-1">
+            <v-btn
+              block
+              size="x-large"
+              color="orange-darken-2"
+              @click="setOperator('%')"
+            >
+              %
+            </v-btn>
+          </v-col>
+          <v-col cols="3" class="pa-1">
+            <v-btn
+              block
+              size="x-large"
+              color="orange-darken-2"
+              @click="setOperator('sqr')"
+            >
+              x²
+            </v-btn>
+          </v-col>
+
+          <v-col cols="3" class="pa-1">
+            <v-btn
+              block
+              size="x-large"
+              color="orange-darken-2"
+              @click="setOperator('sqrt')"
+            >
+              √
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row no-gutters>
           <v-col cols="3" class="pa-1"
             ><v-btn block size="x-large" color="white" @click="append('7')"
               >7</v-btn
@@ -210,6 +243,19 @@ export default {
           break;
         case "/":
           res = b === 0 ? "Error" : a / b;
+          break;
+        case "%":
+          res = a % b;
+          break;
+        case "sqr":
+          res = Math.pow(b, 2); // or b * b
+          break;
+        case "sqrt":
+          if (b < 0) {
+            res = "Error"; // You can't take the square root of a negative number!
+          } else {
+            res = Math.sqrt(b);
+          }
           break;
         default:
           return;
